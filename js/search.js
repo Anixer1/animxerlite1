@@ -1,11 +1,11 @@
 // Api urls
 
-const ProxyApi = "https://proxy.techzbots1.workers.dev/?u="
+const ProxyApi = "proxy1.xeranime707.workers.dev/?u="
 const searchapi = "/search/";
 
 // Api Server Manager
 
-const AvailableServers = ['https://animedexapi.xeranime707.workers.dev', 'https://animedexapi.rexcalumba86.workers.dev', 'https://api3.anime-dex.workers.dev']
+const AvailableServers = ['https://animedexapi.xeranime707.workers.dev', 'https://animedexapi.rexcalumba86.workers.dev', 'https://animxer-api1.xeranime707.workers.dev']
 
 function getApiServer() {
     return AvailableServers[Math.floor(Math.random() * AvailableServers.length)]

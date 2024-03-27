@@ -1,6 +1,6 @@
 // Api urls
 
-const ProxyApi = "https://proxy.techzbots1.workers.dev/?u=";
+const ProxyApi = "proxy1.xeranime707.workers.dev/?u=";
 const animeapi = "/anime/";
 const episodeapi = "/episode/";
 const dlapi = "/download/";
@@ -8,9 +8,9 @@ const dlapi = "/download/";
 // Api Server Manager
 
 const AvailableServers = [
-    "https://animedexapi.xeranime707.workers.dev",
     "https://animedexapi.rexcalumba86.workers.dev",
-    "https://api3.anime-dex.workers.dev",
+    "https://animedexapi.xeranime707.workers.dev",
+    "https://animxer-api1.xeranime707.workers.dev",
 ];
 
 function getApiServer() {
@@ -57,19 +57,17 @@ function capitalizeFirstLetter(string) {
 
 // Function to get m3u8 url of episode
 async function loadVideo(name, stream) {
-    const episodeid =
-        urlParams.get("anime") + "-episode-" + urlParams.get("episode");
 
     try {
         document.getElementById("ep-name").innerHTML = name;
         const serversbtn = document.getElementById("serversbtn");
 
         let url = stream["sources"][0]["file"];
-        serversbtn.innerHTML += `<div class="sitem"> <a class="sobtn sactive" onclick="selectServer(this)" data-value="./embed.html?url=${url}&id=${episodeid}">ANIMXER SERVER 1</a> </div>`;
+        serversbtn.innerHTML += `<div class="sitem"> <a class="sobtn sactive" onclick="selectServer(this)" data-value="./embed.html?url=${url}&episode_id=${EpisodeID}">AD Free 1</a> </div>`;
         document.getElementsByClassName("sactive")[0].click();
 
         url = stream["sources_bk"][0]["file"];
-        serversbtn.innerHTML += `<div class="sitem"> <a class="sobtn" onclick="selectServer(this)" data-value="./embed.html?url=${url}&id=${episodeid}">ANIMXER SERVER 2</a> </div>`;
+        serversbtn.innerHTML += `<div class="sitem"> <a class="sobtn" onclick="selectServer(this)" data-value="./embed.html?url=${url}&episode_id=${EpisodeID}">AD Free 2</a> </div>`;
 
         return true;
     } catch (err) {
@@ -234,18 +232,18 @@ async function getEpSlider(total) {
         const epNum = total[i][0]
         if (episodeId == EpisodeID) {
             if (isShortNumber(epNum)) {
-                ephtml += `<div class="ep-slide ep-slider-playing"><a href="./episode.html?anime_id=${AnimeID}&episode_id=${episodeId}"><img onerror="retryImageLoad(this)" class="lzy_img" src="./static/loading1.gif" data-src=https://thumb.anime-dex.workers.dev/thumb/${episodeId}><div class=ep-title><span>Episode ${epNum} - Playing</span></div></a></div>`;
+                ephtml += `<div class="ep-slide ep-slider-playing"><a href="./episode.html?anime_id=${AnimeID}&episode_id=${episodeId}"><img onerror="retryImageLoad(this)" class="lzy_img" src="./static/loading1.gif" data-src=https://thumb.techzbots1.workers.dev/thumb/${episodeId}><div class=ep-title><span>Episode ${epNum} - Playing</span></div></a></div>`;
             }
             else {
-                ephtml += `<div class="ep-slide ep-slider-playing"><a href="./episode.html?anime_id=${AnimeID}&episode_id=${episodeId}"><img onerror="retryImageLoad(this)" class="lzy_img" src="./static/loading1.gif" data-src=https://thumb.anime-dex.workers.dev/thumb/${episodeId}><div class=ep-title><span>Ep ${epNum} - Playing</span></div></a></div>`;
+                ephtml += `<div class="ep-slide ep-slider-playing"><a href="./episode.html?anime_id=${AnimeID}&episode_id=${episodeId}"><img onerror="retryImageLoad(this)" class="lzy_img" src="./static/loading1.gif" data-src=https://thumb.techzbots1.workers.dev/thumb/${episodeId}><div class=ep-title><span>Ep ${epNum} - Playing</span></div></a></div>`;
             }
         }
         else {
             if (isShortNumber(epNum)) {
-                ephtml += `<div class=ep-slide><a href="./episode.html?anime_id=${AnimeID}&episode_id=${episodeId}"><img onerror="retryImageLoad(this)" class="lzy_img" src="./static/loading1.gif" data-src=https://thumb.anime-dex.workers.dev/thumb/${episodeId}><div class=ep-title><span>Episode ${epNum}</span></div></a></div>`;
+                ephtml += `<div class=ep-slide><a href="./episode.html?anime_id=${AnimeID}&episode_id=${episodeId}"><img onerror="retryImageLoad(this)" class="lzy_img" src="./static/loading1.gif" data-src=https://thumb.techzbots1.workers.dev/thumb/${episodeId}><div class=ep-title><span>Episode ${epNum}</span></div></a></div>`;
             }
             else {
-                ephtml += `<div class=ep-slide><a href="./episode.html?anime_id=${AnimeID}&episode_id=${episodeId}"><img onerror="retryImageLoad(this)" class="lzy_img" src="./static/loading1.gif" data-src=https://thumb.anime-dex.workers.dev/thumb/${episodeId}><div class=ep-title><span>Ep ${epNum}</span></div></a></div>`;
+                ephtml += `<div class=ep-slide><a href="./episode.html?anime_id=${AnimeID}&episode_id=${episodeId}"><img onerror="retryImageLoad(this)" class="lzy_img" src="./static/loading1.gif" data-src=https://thumb.techzbots1.workers.dev/thumb/${episodeId}><div class=ep-title><span>Ep ${epNum}</span></div></a></div>`;
             }
         }
     }
