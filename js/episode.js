@@ -8,9 +8,9 @@ const dlapi = "/download/";
 // Api Server Manager
 
 const AvailableServers = [
-    "https://animedexapi.rexcalumba86.workers.dev",
-    "https://animedexapi.xeranime707.workers.dev",
-    "https://animxer-api1.xeranime707.workers.dev",
+    "https://gogoanimeapi-chi.vercel.app",
+    "https://gogoanimeapi-chi.vercel.app",
+    "https://gogoanimeapi-chi.vercel.app",
 ];
 
 function getApiServer() {
