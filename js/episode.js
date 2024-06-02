@@ -7,11 +7,7 @@ const dlapi = "/download/";
 
 // Api Server Manager
 
-const AvailableServers = [
-    "https://gogoanimeapi-chi.vercel.app",
-    "https://gogoanimeapi-chi.vercel.app",
-    "https://gogoanimeapi-chi.vercel.app",
-];
+const AvailableServers = ["https://anixer-api.animxersite.workers.dev"];
 
 function getApiServer() {
     return AvailableServers[Math.floor(Math.random() * AvailableServers.length)];
